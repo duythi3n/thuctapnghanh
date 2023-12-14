@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Cor-Medium';
+    src: url(../asset/fonts/CormorantGaramond-Medium.ttf);
+}
+@font-face {
+    font-family: 'Cor-MediumItalic';
+    src: url(../asset/fonts/CormorantGaramond-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'lg-eot';
+    src: url(../asset/fonts/lg.eot);
+}
+@font-face {
+    font-family: 'lg-ttf';
+    src: url(../asset/fonts/lg.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'lg-woff';
+    src: url(../asset/fonts/lg.woff) format(truetype);
+}
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url(../asset/fonts/Quicksand-Bold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url(../asset/fonts/Quicksand-Medium.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url(../asset/fonts/Quicksand-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src: url(../asset/fonts/Quicksand-SemiBold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Roboto-ExtraBold';
+    src: url(../asset/fonts/RobotoSlab-ExtraBold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'vjs-eot';
+    src: url(../asset/fonts/vjs.eot) format(truetype);
+}
+@font-face {
+    font-family: 'vjs-ttf';
+    src: url(../asset/fonts/vjs.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'vjs-woff';
+    src: url(../asset/fonts/vjs.woff) format(truetype);
+}
+
+.text1{
+    font-family: 'Cor-MediumItalic';
+}
+.text2 {
+    font-family: 'Roboto-ExtraBold';
+}
+.text3{
+    font-family: 'Quicksand-Regular';
+}
+.text4{
+    font-family: 'Cor-Medium';
+}
+.text5{
+    font-family: 'lg-eot';
+}
+.text6{
+    font-family: 'lg-ttf';
+}
+.text7{
+    font-family: 'lg-woff';
+}
+.text8{
+    font-family: 'Quicksand-Bold';
+}
+.text9{
+    font-family: 'Quicksand-Medium';
+}
+.text10{
+    font-family: 'Quicksand-SemiBold';
+}
+.text11{
+    font-family: 'vjs-eot';
+}
+.text12{
+    font-family: 'vjs-ttf';
+}
+.text13{
+    font-family: 'vjs-woff';
+}
+
+.nuts li.active{
+    background-color: white;
+}
+.list{
+    transition: 1s;
+}
+.main-container{
+    background-image: url(../asset/images/background/1.png);
+}
+.product-itemt{
+    flex: 0 0 24%;
+}

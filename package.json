@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "npx tailwindcss -i ./css/tailwind.css -o ./dist/buildcss.css --watch"
   },
   "keywords": [],
   "author": "",

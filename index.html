@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="dist/buildcss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 700) {
+        $(".header, .home, ul, .cart").addClass("newClass");
+        } else {
+        $(".header, .home, ul, .cart").removeClass("newClass");
+        }
+    });
+    });
+    </script>
 </head>
 <style>
     .newClass {
@@ -32,32 +45,44 @@
     }
 </style>
 <body class="bg-[#fcf8ef]">
-    <div class="header">
-        <div class="w-[1280px] mx-auto header">
-            <div class="fixed flex justify-center items-center text-white mt-6 z-50">
-                <div class="items-center w-[20px] mr-5"><i class="fa-solid fa-house"></i></div>
+    <div class="header w-full fixed py-4 z-30">
+        <div class=" w-[1280px] h-14 mx-auto">
+            <div class=" flex justify-center items-center text-white">
+                <div class="home items-center w-[20px] mr-5"><i class="fa-solid fa-house"></i></div>
                 <div class="flex">
                     <div class="flex items-center">
-                        <ul class="flex">
-                            <li class="mx-5">Sản Phẩm <i class="fa-solid fa-chevron-down"></i></li>
+                        <ul class="flex gap-10">
+                            <div>
+                                <button>Sản Phẩm</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
                             <li class="mx-5">Giới Thiệu</li>
-                            <li class="mx-5">Khuyến Mãi <i class="fa-solid fa-chevron-down"></i></li>
+                            <div>
+                                <button>Khuyến Mãi</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
                         </ul>
                     </div>
-                    <div class="mx-[140px]">
+                    <div class="mx-32">
                         <img class="w-[150px] h-[50px]" src="asset/images/logo/logo.png" alt="">
                     </div>
                     <div class="flex items-center">
-                        <ul class="flex">
-                            <li class="mx-5">Tin Tức <i class="fa-solid fa-chevron-down"></i></li>
-                            <li class="mx-5">Đại Lý <i class="fa-solid fa-chevron-down"></i></li>
-                            <li class="mx-5">Liên Hệ</li>
+                        <ul class="flex gap-10">
+                            <div>
+                                <button>Tin Tức</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div>
+                                <button>Đại Lý</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <li>Liên Hệ</li>
                         </ul>
                     </div>
                 </div>
                 <div class="flex mx-5">
-                    <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
-                    <ul>
+                    <div class="cart"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                    <ul class="flex flex-col gap-1 mt-1">
                         <li><img class="mx-4 cursor-pointer" src="asset/images/language/vi.jpg" alt=""></li>
                         <li><img class="mx-4 cursor-pointer hidden" src="asset/images/language/en.jpg" alt=""></li>
                     </ul>

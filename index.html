@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="dist/buildcss.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="dist/build_css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
     $(window).scroll(function() {
-        if ($(document).scrollTop() > 700) {
-        $(".header, .home, ul, .cart").addClass("newClass");
+        if ($(document).scrollTop() > 200) {
+        $(".header, .cart, .menu").addClass("newClass");
         } else {
-        $(".header, .home, ul, .cart").removeClass("newClass");
+        $(".header, .cart, .menu").removeClass("newClass");
         }
     });
     });
@@ -45,101 +46,84 @@
     }
 </style>
 <body class="bg-[#fcf8ef]">
-    <div class="header w-full fixed py-4 z-30">
-        <div class=" w-[1280px] h-14 mx-auto">
-            <div class=" flex justify-center items-center text-white">
-                <div class="home items-center w-[20px] mr-5"><i class="fa-solid fa-house"></i></div>
-                <div class="flex">
-                    <div class="flex items-center">
-                        <ul class="flex gap-10">
-                            <div>
-                                <button>Sản Phẩm</button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <li class="mx-5">Giới Thiệu</li>
-                            <div>
-                                <button>Khuyến Mãi</button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="mx-32">
-                        <img class="w-[150px] h-[50px]" src="asset/images/logo/logo.png" alt="">
-                    </div>
-                    <div class="flex items-center">
-                        <ul class="flex gap-10">
-                            <div>
-                                <button>Tin Tức</button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div>
-                                <button>Đại Lý</button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                            <li>Liên Hệ</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex mx-5">
-                    <div class="cart"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                    <ul class="flex flex-col gap-1 mt-1">
-                        <li><img class="mx-4 cursor-pointer" src="asset/images/language/vi.jpg" alt=""></li>
-                        <li><img class="mx-4 cursor-pointer hidden" src="asset/images/language/en.jpg" alt=""></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="header sm:w-full w-[100vw] sm:!h-[100px] h-[50px] sm:bg-[unset] bg-[#323232] sm:text-white text3 fixed z-10">
+        <span class="menu sm:hidden text-3xl text-white cursor-pointer"><ion-icon class="w-8 h-8 mt-2 ml-4" name="menu" id="menuIcon" onclick="Menu()"></ion-icon></span>
+        <div class="nav relative sm:opacity-100 opacity-0" id="navLinks">
+            <ul class="sm:w-[1280px] w-4/5 sm:h-[100px] h-[100vh] sm:!bg-[unset] bg-white sm:mt-0 mt-1 sm:flex sm:justify-between sm:items-center sm:mx-auto">
+                <ul class="sm:flex sm:gap-10 items-center justify-center">
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]"><i class="fa-solid fa-house"></i></li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Sản Phẩm<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Giới Thiệu</li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Khuyến Mãi<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
+                </ul>
+                <ul class="sm:flex sm:gap-10 sm:mr-28">
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Tin Tức<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Đại Lý<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Liên Hệ</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="logo sm:w-[150px] w-28 sm:h-[50px] h-10 absolute sm:top-5 top-1 sm:right-[43%] right-1/3">
+            <img src="asset/images/logo/logo.png" alt="">
+        </div>
+        <div class="absolute sm:top-10 top-2 sm:right-16 right-0 flex sm:mx-5 text-white">
+            <div class="cart"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+            <ul class="flex flex-col gap-1 mt-1">
+                <li><img class="mx-4 cursor-pointer" src="asset/images/language/vi.jpg" alt=""></li>
+                <li><img class="mx-4 cursor-pointer hidden" src="asset/images/language/en.jpg" alt=""></li>
+            </ul>
         </div>
     </div>
-    <div class="slider w-full max-w-[1500px] h-[750px] mx-auto relative overflow-hidden">
+    <div class="slider w-full sm:max-w-[1500px] max-w-[640px] sm:h-[750px] h-[200px] mx-auto relative overflow-hidden">
         <div class="list flex absolute top-0 left-0 h-full w-max">
             <div class="itemt">
-                <img src="asset/images/heroSlide/2.jpg" alt="" class=" h-full object-cover">
+                <img src="asset/images/heroSlide/2.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
             </div>
             <div class="itemt">
-                <img src="asset/images/heroSlide/1.jpg" alt="" class=" h-full object-cover">
+                <img src="asset/images/heroSlide/1.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
             </div>
             <div class="itemt">
-                <img src="asset/images/heroSlide/2.jpg" alt="" class=" h-full object-cover">
+                <img src="asset/images/heroSlide/2.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
             </div>
             <div class="itemt">
-                <img src="asset/images/heroSlide/1.jpg" alt="" class=" h-full object-cover">
+                <img src="asset/images/heroSlide/1.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
             </div>
             <div class="itemt">
-                <img src="asset/images/heroSlide/2.jpg" alt="" class=" h-full object-cover">
+                <img src="asset/images/heroSlide/2.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
             </div>
         </div>
-        <ul class="nuts absolute top-1/3 right-20 flex flex-col">
-            <li class="active list-none w-5 h-5 border-solid border-2 border-white m-2 rounded-full"></li>
-            <li class="list-none w-5 h-5 border-solid border-2 border-white m-2 rounded-full"></li>
-            <li class="list-none w-5 h-5 border-solid border-2 border-white m-2 rounded-full"></li>
-            <li class="list-none w-5 h-5 border-solid border-2 border-white m-2 rounded-full"></li>
-            <li class="list-none w-5 h-5 border-solid border-2 border-white m-2 rounded-full"></li>
+        <ul class="nuts absolute sm:top-1/3 bottom-0 sm:right-20 sm:left-[unset] left-1/3 flex sm:flex-col">
+            <li class="active list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
+            <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
+            <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
+            <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
+            <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
         </ul>
-        <div class="slider-content absolute top-1/3 left-[30%] text-white">
-            <p class="flex text-3xl text1">Thành phần tự nhiên <img class="h-8 ml-4" src="asset/images/logo/bough-logo.png" alt=""></p>
-            <h1 class="my-8 font-bold text-7xl">TỰ TIN TỎA SÁNG</h1>
-            <button class="flex justify-center bg-[#efc65a] px-4 py-2 rounded-full mx-auto text3">Đặt Hàng Ngay</button>
+        <div class="slider-content absolute sm:top-1/3 top-[15%] sm:left-[30%] left-10 text-white">
+            <p class="flex sm:text-3xl text1">Thành phần tự nhiên <img class="sm:h-8 h-4 ml-4" src="asset/images/logo/bough-logo.png" alt=""></p>
+            <h1 class="sm:my-8 my-2 sm:w-auto w-[100px] font-bold sm:text-7xl">TỰ TIN TỎA SÁNG</h1>
+            <button class="sm:flex sm:justify-center bg-[#efc65a] px-4 py-2 rounded-full mx-auto text3">Đặt Hàng Ngay</button>
         </div>
     </div>
     <div class="utilities">
         <div class="">
-            <div class="flex flex-row justify-center items-center py-14 px-10 text-center">
-                <div class=" px-16 border-solid border-r-2 border-[#e5e2db]">
+            <div class="flex sm:flex-row sm:!flex-nowrap flex-wrap gap-y-10 justify-center items-center py-14 sm:px-10 text-center">
+                <div class="sm:px-16 sm:w-[unset] w-1/2 border-solid border-r-2 border-[#e5e2db]">
                     <img src="asset/images/Icons-svg/utilities/1.svg" alt="" class="my-4 mx-auto w-20 ">
                     <h1 class="mb-8 text8">Thành Phần Tự Nhiên</h1>
                     <p class="text3">Sản phẩm dưỡng da tinh chất từ yến đầu tiên tại Việt Nam</p>
                 </div>
-                <div class=" px-16 border-solid border-r-2 border-[#e5e2db]">
+                <div class="sm:px-16 sm:w-[unset] w-1/2 sm:border-solid sm:border-r-2 sm:border-[#e5e2db]">
                     <img src="asset/images/Icons-svg/utilities/2.svg" alt="" class="my-4 mx-auto w-20">
                     <h1 class="mb-8 text8">Độ PH Trung Tính</h1>
                     <p class="text3">Sản phẩm dưỡng da tinh chất từ yến đầu tiên tại Việt Nam</p>
                 </div>
-                <div class=" px-16 border-solid border-r-2 border-[#e5e2db]">
+                <div class="sm:px-16 sm:w-[unset] w-1/2 border-solid border-r-2 border-[#e5e2db]">
                     <img src="asset/images/Icons-svg/utilities/3.svg" alt="" class="my-4 mx-auto w-20">
                     <h1 class="mb-8 text8">Bảo Vệ Môi Trường</h1>
                     <p class="text3">Sản phẩm dưỡng da tinh chất từ yến đầu tiên tại Việt Nam</p>
                 </div>
-                <div class=" px-16">
+                <div class="sm:px-16 sm:w-[unset] w-1/2">
                     <img src="asset/images/Icons-svg/utilities/4.svg" alt="" class="my-4 mx-auto w-20">
                     <h1 class="mb-8 text8">Không Chứa Paraben</h1>
                     <p class="text3">Sản phẩm dưỡng da tinh chất từ yến đầu tiên tại Việt Nam</p>
@@ -149,31 +133,31 @@
     </div>
     <div class="main-container">
         <div class="container-newproduct">
-            <div class="flex mx-auto w-3/4 mt-4 h-[600px]">
+            <div class="sm:flex sm:mx-auto sm:w-3/4 mt-4 sm:h-[600px]">
                 <div class="image">
-                    <img src="asset/images/background/about-1.png" alt="" class="m-14">
+                    <img src="asset/images/background/about-1.png" alt="" class="sm:m-14 m-5">
                 </div>
-                <div class="ml-36 pt-20">
+                <div class="sm:ml-36 ml-5 sm:pt-20">
                     <div class="info">
-                        <h2 class="text1 text-4xl font-normal mb-6">Sản Phẩm Mới</h2>
-                        <h1 class="text10 text-4xl leading-tight mb-4">Serium Dưỡng Da <br> Tinh Chất yến Sào <br> Đầu Tiên Ở Việt Nam</h1>
+                        <h2 class="text1 sm:text-4xl text-xl font-normal sm:mb-6 mb-3">Sản Phẩm Mới</h2>
+                        <h1 class="text10 sm:text-4xl text-3xl leading-tight sm:mb-4 mb-2">Serium Dưỡng Da <br> Tinh Chất yến Sào <br> Đầu Tiên Ở Việt Nam</h1>
                         <p class="text3 mb-6">Với thành phần độc đáo của yến sào, serium không chỉ dưỡng ẩm sâu mà còn kích thích sản sinh collagen, giảm nếp nhăn. <br><br>Trải nghiệm sự trẻ trung và khám phá làn da mới với sự hỗ trợ toàn diện từ serum chăm sóc da hằng ngày.</p>
                     </div>
-                    <div class="btn pb-20">
-                        <button class="bg-[#efc65a] px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                        <button class="px-4 py-[6px] ml-6 border-solid border-2 border-black rounded-2xl text3">Thêm Vào Giỏ Hàng</button>
+                    <div class="btn pb-20 flex sm:flex-row flex-col">
+                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
+                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="collection bg-[#f3eddd] relative">
-            <div class="product w-[1280px] mx-auto">
+            <div class="product sm:w-[1280px] w-[640px] mx-auto">
                 <div class="product-tiles">
                     <div class="product-title">
-                        <div class="flex justify-center items-center flex-col pt-8">
-                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25">
-                            <h1 class="absolute top-14 text-5xl text1">Bộ Sưu Tập</h1>
-                            <p class="text3 text-lg pb-5">Vẻ Đẹp Tinh Tế</p>
+                        <div class="flex justify-center items-center flex-col sm:pt-8 mr-44">
+                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25 sm:w-[unset] sm:h-[unset] w-[100px] h-[50px]">
+                            <h1 class="absolute sm:top-14 top-5 sm:text-5xl text-2xl text1">Bộ Sưu Tập</h1>
+                            <p class="text3 sm:text-lg text-sm pb-5">Vẻ Đẹp Tinh Tế</p>
                         </div>
                     </div>
                 </div>
@@ -762,13 +746,13 @@
                     <div class="flex justify-center items-center flex-col pt-8">
                         <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25">
                         <h1 class="absolute top-16 text-5xl text1">Cảm Nhận</h1>
-                        <p class="text3 text-lg pb-5">Khách Hàng Nói Gì Về Sản Phẩm</p>
+                        <p class="text3 text-lg pb-5">Được Đánh Giá Cao Nhất</p>
                     </div>
                 </div>
             </div>
             <div class="feedback swiper mySwiper2 w-[1280px] max-w-max mx-auto overflow-hidden py-10">
-                <div class="feedback-list swiper-wrapper">
-                    <div class="feedback-itemt mb-5 swiper-slide">
+                <div class="feedback-list mb-10 swiper-wrapper">
+                    <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex gap-24">
                             <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
                                 <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
@@ -808,7 +792,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-5 swiper-slide">
+                    <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex gap-24">
                             <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
                                 <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
@@ -848,7 +832,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-5 swiper-slide">
+                    <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex  gap-24">
                             <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
                                 <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
@@ -888,7 +872,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-5 swiper-slide">
+                    <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex  gap-24">
                             <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
                                 <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
@@ -928,7 +912,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-5 swiper-slide">
+                    <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex  gap-24">
                             <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
                                 <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
@@ -1281,23 +1265,23 @@
     </div>
     <script src="js/scrip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script>
-        var swiper = new Swiper(".mySwiper2", {
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
-          effect: "fade",
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
+    <script>
+    var swiper = new Swiper(".mySwiper2", {
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+    </script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+    </script>
 </body>
 </html>

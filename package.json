@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "npx tailwindcss -i ./css/tailwind.css -o ./dist/buildcss.css --watch"
+    "build": "npx tailwindcss -i ./css/tailwind.css -o ./dist/build_css.css --watch"
   },
   "keywords": [],
   "author": "",

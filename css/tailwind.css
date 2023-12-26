@@ -107,3 +107,8 @@
 .product-itemt{
     flex: 0 0 24%;
 }
+@media (max-width: 640px) {
+    .product-itemt {
+        flex: 0 0 100%;
+    }
+}

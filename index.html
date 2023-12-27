@@ -29,6 +29,15 @@
         background-color:#f3eddd;
         color: black;
     }
+    
+    .swiper-button-next {
+        color: #efc451;
+    }
+
+    .swiper-button-prev{
+        color: #efc451;
+    }
+
     .swiper-pagination-bullet {
         width: 15px;
         height: 15px;
@@ -37,12 +46,12 @@
         opacity: 1;
         background: transparent;
         border: 2px solid #8b8988;
-      }
+    }
 
     .swiper-pagination-bullet-active {
         color: #fff;
         background: #efc65a;
-        border: none;
+        border: none;   
     }
 </style>
 <body class="bg-[#fcf8ef]">
@@ -63,7 +72,7 @@
                 </ul>
             </ul>
         </div>
-        <div class="logo sm:w-[150px] w-28 sm:h-[50px] h-10 absolute sm:top-5 top-1 sm:right-[43%] right-1/3">
+        <div class="logo sm:w-[150px] w-28 sm:h-[50px] h-10 absolute sm:top-5 top-1 sm:left-[47%] right-1/3">
             <img src="asset/images/logo/logo.png" alt="">
         </div>
         <div class="absolute sm:top-10 top-2 sm:right-16 right-0 flex sm:mx-5 text-white">
@@ -155,213 +164,232 @@
                 <div class="product-tiles">
                     <div class="product-title">
                         <div class="sm:flex h-[150px] justify-center items-center flex-col sm:pt-8 pt-4 sm:ml-[unset] ml-40">
-                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="absolute top-5 opacity-25 sm:w-[unset] sm:h-[unset] w-36 h-32">
-                            <h1 class="absolute top-14 sm:text-5xl text-3xl text1">Bộ Sưu Tập</h1>
-                            <p class="absolute sm:top-36 top-32 left-[45%] text3 sm:text-lg text-sm pb-5">Vẻ Đẹp Tinh Tế</p>
+                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="absolute left-[46%] top-5 opacity-25 sm:w-[unset] sm:h-[unset] w-36 h-32">
+                            <h1 class="absolute top-14 left-[45%] sm:text-5xl text-3xl text1">Bộ Sưu Tập</h1>
+                            <p class="absolute sm:top-36 top-32 left-[47%] text3 sm:text-lg text-sm pb-5">Vẻ Đẹp Tinh Tế</p>
                         </div>
                     </div>
                 </div>
-                <div class="product-list  bg-[#f3eddd] my-10">
-                    <div class="product-items swiper-wrapper flex flex-nowrap sm:pb-0 pb-10 gap-4 overflow-hidden" id="product-items">
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/1.png" alt="" class="w-30 h-80"></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper mx-1 my-10">
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/1.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>        
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/2.png" alt="" class="w-30 h-72"></div>
-                                <div class="item-name col-span-3 mb-2">Kem Tẩy Tế Bào Chết (900ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/2.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Kem Tẩy Tế Bào Chết (900ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/3.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Kem Dưỡng Mắt</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/3.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Kem Dưỡng Mắt</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/4.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Kem chống Lão Hóa</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/4.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Kem chống Lão Hóa</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/5.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/5.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/6.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/6.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/7.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/7.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/8.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/8.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/9.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/9.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/10.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/10.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/11.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/11.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
-                        <div class="product-itemt swiper-slide bg-white justify-center items-center rounded-sm">
-                            <div class="item w-11/12 mx-auto grid grid-cols-3 text3">
-                                <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4"><img src="asset/images/product/12.png" alt=""></div>
-                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                                <div class="item-price col-span-3 flex gap-4 mb-5">
-                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                    <div class="price-current text-lg font-bold">700.000đ</div>
-                                    <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                                </div>
-                                <div class="item-oder col-span-3 flex justify-between mb-3">
-                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                    <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                                </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                <img src="asset/images/product/12.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                            </div>
+                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                            <div class="item-price col-span-3 flex gap-4 mb-5">
+                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                <div class="price-current text-lg font-bold">700.000đ</div>
+                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
+                            </div>
+                            <div class="item-oder col-span-3 flex justify-between mb-3">
+                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
                             </div>
                         </div>
+                      </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination sm:hidden"></div>
-                </div>
+                </div>      
             </div>
-            <div class="buttons absolute text-center w-full top-2/3 z-30 text-[#efc65a]">
-                <div class="buttons-list sm:flex hidden justify-between mx-20">
-                    <button id="prev"><i class="fa-solid fa-chevron-left scale-150"></i></button>
-                    <button id="next"><i class="fa-solid fa-chevron-right scale-150"></i></button>
-                </div>
-            </div>
-            
-        </div>
+        <div class="space h-20"></div>
         <div class="favourite bg-[#f3eddd] relative py-8">
             <div class="favourite-tiles">
                 <div class="favourite-title">
                     <div class="sm:flex justify-center items-center flex-col sm:pt-8 pt-4 sm:ml-[unset] ml-40">
-                        <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25 sm:w-[unset] sm:h-[unset] w-36 h-32">
-                        <h1 class="absolute top-24 sm:left-[unset] left-24 sm:text-5xl text-2xl text1">Sản Phẩm Được Yêu Thích</h1>
-                        <p class="absolute text3 top-40 sm:text-lg sm:left-[unset] left-36 text-sm pb-5">Được Đánh Giá Cao Nhất</p>
+                        <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25 left-[46%] sm:w-[unset] sm:h-[unset] w-36 h-32">
+                        <h1 class="absolute top-24 sm:left-[unset] left-[30%] sm:text-5xl text-2xl text1">Sản Phẩm Được Yêu Thích</h1>
+                        <p class="absolute text3 top-40 sm:text-lg sm:left-[unset] left-[35%] text-sm pb-5">Được Đánh Giá Cao Nhất</p>
                     </div>
                 </div>
             </div>
@@ -523,7 +551,7 @@
                             <p class="text-lg text3">Giờ</p>
                         </div>
                     </div>
-                    <div class="product-sale  mySwiper sm:!w-[820px] w-[100vw] h-64 mx-auto overflow-hidden">
+                    <div class="product-sale  mySwiper4 sm:!w-[820px] w-[100vw] h-64 sm:mx-auto ml-16 overflow-hidden">
                         <div class="list-sale swiper-wrapper flex">
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
@@ -546,20 +574,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="itemt-right bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md">
-                                        <div class="right-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
+                                </div>
+                            </div>
+                            <div class="itemt-sale swiper-slide">
+                                <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
+                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
                                         </div>                              
-                                        <div class="right-des m-2.5">
-                                            <div class="right-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="right-prices">
+                                        <div class="left-des m-2.5">
+                                            <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
+                                            <div class="left-prices">
                                                 <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
                                                     <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đặt Hàng Ngay</button>
+                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
                                                     <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
@@ -588,25 +620,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="itemt-right bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md">
-                                        <div class="right-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
-                                        </div>                              
-                                        <div class="right-des m-2.5">
-                                            <div class="right-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="right-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                                <div class="price flex my-3">
-                                                    <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
-                                                </div>
-                                                <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="itemt-sale swiper-slide">
@@ -630,25 +643,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="itemt-right bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md">
-                                        <div class="right-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
-                                        </div>                              
-                                        <div class="right-des m-2.5">
-                                            <div class="right-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="right-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                                <div class="price flex my-3">
-                                                    <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
-                                                </div>
-                                                <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="itemt-sale swiper-slide">
@@ -667,67 +661,6 @@
                                                 </div>
                                                 <div class="btn pb-20">
                                                     <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="itemt-right bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md">
-                                        <div class="right-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
-                                        </div>                              
-                                        <div class="right-des m-2.5">
-                                            <div class="right-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="right-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                                <div class="price flex my-3">
-                                                    <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
-                                                </div>
-                                                <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="itemt-sale swiper-slide">
-                                <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
-                                        <div class="left-des m-2.5">
-                                            <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                                <div class="price flex my-3">
-                                                    <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
-                                                </div>
-                                                <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="itemt-right bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md">
-                                        <div class="right-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
-                                        </div>                              
-                                        <div class="right-des m-2.5">
-                                            <div class="right-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
-                                            <div class="right-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                                <div class="price flex my-3">
-                                                    <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
-                                                </div>
-                                                <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đặt Hàng Ngay</button>
                                                     <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
@@ -752,7 +685,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback swiper mySwiper2 w-[1280px] max-w-max mx-auto overflow-hidden py-10">
+            <div class="feedback swiper mySwiper3 w-[1280px] max-w-max mx-auto overflow-hidden py-10">
                 <div class="feedback-list mb-10 swiper-wrapper">
                     <div class="feedback-itemt mb-10 swiper-slide">
                         <div class="flex gap-24">
@@ -968,7 +901,7 @@
                     </div>
                 </div>
             </div>
-            <div class="experience-blogs swiper mySwiper2 w-[1280px] max-w-max mx-auto">
+            <div class="experience-blogs swiper mySwiper3 w-[1280px] max-w-max mx-auto">
                 <div class="list-blogs swiper-wrapper">
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
@@ -1082,7 +1015,7 @@
                     </div>
                 </div>
             </div>
-            <div class="news-blogs swiper mySwiper2 w-[1280px] max-w-max mx-auto">
+            <div class="news-blogs swiper mySwiper3 w-[1280px] max-w-max mx-auto">
                 <div class="list-blogs swiper-wrapper">
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
@@ -1268,14 +1201,6 @@
     <script src="js/scrip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-    var swiper = new Swiper(".mySwiper2", {
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-    });
-    </script>
-    <script>
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         effect: "fade",
@@ -1283,13 +1208,55 @@
         el: ".swiper-pagination",
         clickable: true,
         },
-        breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
+    });
+    var swiper = new Swiper(".mySwiper2", {
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
         },
-        
-      },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+        },
+    });
+    var swiper = new Swiper(".mySwiper3", {
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+    var swiper = new Swiper(".mySwiper4", {
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        breakpoints: {
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
     });
     </script>
 </body>

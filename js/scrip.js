@@ -34,3 +34,17 @@ document.querySelector('.nuts').addEventListener('click', (event) => {
     }
 });
 setInterval(nextSlide, 3000);
+
+//toggle Navigation
+function Menu() {
+    var navLinks = document.getElementById("navLinks");
+    var menuIcon = document.getElementById("menuIcon");
+
+    if (navLinks.style.opacity === "0") {
+        navLinks.style.opacity = "1";
+        menuIcon.setAttribute("name", "close");
+    } else {
+        navLinks.style.opacity = "0";
+        menuIcon.setAttribute("name", "menu");
+    }
+}

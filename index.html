@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,36 @@
     <link rel="icon" type="image/x-icon" href="asset/images/logo/logo.ico">
     <link rel="stylesheet" href="build/tailwind.css">
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link rel="stylesheet" href="dist/build_css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 200) {
-        $(".header, .cart, .menu").addClass("newClass");
-        } else {
-        $(".header, .cart, .menu").removeClass("newClass");
-        }
-    });
-    });
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 200) {
+                    $(".header, .cart, .menu").addClass("newClass");
+                } else {
+                    $(".header, .cart, .menu").removeClass("newClass");
+                }
+            });
+        });
     </script>
 </head>
 <style>
     .newClass {
-        background-color:#f3eddd;
+        background-color: #f3eddd;
         color: black;
     }
-    
+
     .swiper-button-next {
         color: #efc451;
     }
 
-    .swiper-button-prev{
+    .swiper-button-prev {
         color: #efc451;
     }
 
@@ -51,24 +54,76 @@
     .swiper-pagination-bullet-active {
         color: #fff;
         background: #efc65a;
-        border: none;   
+        border: none;
     }
 </style>
+
 <body class="bg-[#fcf8ef]">
-    <div class="header sm:w-full w-[100vw] sm:!h-[100px] h-[50px] sm:bg-[unset] bg-[#323232] sm:text-white text3 fixed z-10">
-        <span class="menu sm:hidden text-3xl text-white cursor-pointer"><ion-icon class="w-8 h-8 mt-2 ml-4" name="menu" id="menuIcon" onclick="Menu()"></ion-icon></span>
+    <div
+        class="header sm:w-full w-[100vw] sm:!h-[100px] h-[50px] sm:bg-[unset] bg-[#323232] sm:text-white text3 fixed z-10">
+        <span class="menu sm:hidden text-3xl text-white cursor-pointer"><ion-icon class="w-8 h-8 mt-2 ml-4" name="menu"
+                id="menuIcon" onclick="Menu(this)"></ion-icon></span>
         <div class="nav relative sm:opacity-100 opacity-0" id="navLinks">
-            <ul class="sm:w-[1280px] w-4/5 sm:h-[100px] h-[100vh] sm:!bg-[unset] bg-white sm:mt-0 mt-1 sm:flex sm:justify-between sm:items-center sm:mx-auto">
+            <ul
+                class="sm:w-[1280px] w-4/5 sm:h-[100px] h-[100vh] sm:!bg-[unset] bg-white sm:mt-0 mt-1 sm:flex sm:justify-between sm:items-center sm:mx-auto">
                 <ul class="sm:flex sm:gap-10 items-center justify-center">
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]"><i class="fa-solid fa-house"></i></li>
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Sản Phẩm<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Giới Thiệu</li>
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Khuyến Mãi<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">
+                        <a href="#"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li
+                        class="dropdown relative sm:pl-0 pl-2 sm:!py-1 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between rounded-sm">
+                        <button class="dropdownbtn">Sản Phẩm</button>
+                        <div class="dropdown-content absolute top-8 bg-[#fcf8ef] w-[200px] rounded-sm">
+                            <a href="#utilities">Dưỡng Ẩm Da</a>
+                            <a href="#">Kem Tẩy Tế Bào Chết</a>
+                            <a href="#">Kem Dưỡng Mắt</a>
+                            <a href="#">Kem Dưỡng Chống Lão Hóa</a>
+                            <a href="#">Kem Dưỡng Ẩm</a>
+                        </div>
+                        <i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i>
+                    </li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Giới
+                        Thiệu</li>
+                    <li
+                        class="dropdown relative sm:pl-0 pl-2 sm:!py-1 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between rounded-sm">
+                        <button class="dropdownbtn">Khuyến Mãi</button>
+                        <div class="dropdown-content absolute top-8 bg-[#fcf8ef] w-[200px] rounded-sm">
+                            <a href="#product-sale">Sữa Rửa Mặt HSkin Care</a>
+                            <a href="#">Dưỡng Ẩm Da</a>
+                            <a href="#">Kem Dưỡng Mắt</a>
+                            <a href="#">Kem Dưỡng Chống Lão Hóa</a>
+                            <a href="#">Kem Dưỡng Ẩm</a>
+                        </div>
+                        <i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i>
+                    </li>
                 </ul>
                 <ul class="sm:flex sm:gap-10 sm:mr-28">
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Tin Tức<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between">Đại Lý<i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i></li>
-                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Liên Hệ</li>
+                    <li
+                        class="dropdown relative sm:pl-0 pl-2 sm:!py-1 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between rounded-sm">
+                        <button class="dropdownbtn">Tin Tức</button>
+                        <div class="dropdown-content absolute top-8 bg-[#fcf8ef] w-[200px] rounded-sm">
+                            <a href="#">Sữa Rửa Mặt HSkin Care</a>
+                            <a href="#">Kem Tẩy Tế Bào Chết</a>
+                            <a href="#">Kem Dưỡng Mắt</a>
+                            <a href="#">Kem Dưỡng Chống Lão Hóa</a>
+                            <a href="#">Kem Dưỡng Ẩm</a>
+                        </div>
+                        <i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i>
+                    </li>
+                    <li
+                        class="dropdown relative sm:pl-0 pl-2 sm:!py-1 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db] flex justify-between rounded-sm">
+                        <button class="dropdownbtn">Đại Lý</button>
+                        <div class="dropdown-content absolute top-8 bg-[#fcf8ef] w-[200px] rounded-sm">
+                            <a href="#">Sữa Rửa Mặt HSkin Care</a>
+                            <a href="#">Kem Tẩy Tế Bào Chết</a>
+                            <a href="#">Kem Dưỡng Mắt</a>
+                            <a href="#">Kem Dưỡng Chống Lão Hóa</a>
+                            <a href="#">Kem Dưỡng Ẩm</a>
+                        </div>
+                        <i class="fa-solid fa-angle-down sm:mx-1 mr-4 sm:mt-1"></i>
+                    </li>
+                    <li class="sm:pl-0 pl-2 sm:py-0 py-4 sm:border-b-0 border-solid border-b-2 border-[#e5e2db]">Liên Hệ
+                    </li>
                 </ul>
             </ul>
         </div>
@@ -77,13 +132,18 @@
         </div>
         <div class="absolute sm:top-10 top-2 sm:right-16 right-0 flex sm:mx-5 text-white">
             <div class="cart"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-            <ul class="flex flex-col gap-1 mt-1">
-                <li><img class="mx-4 cursor-pointer" src="asset/images/language/vi.jpg" alt=""></li>
-                <li><img class="mx-4 cursor-pointer hidden" src="asset/images/language/en.jpg" alt=""></li>
-            </ul>
+            <div class="language dropdown flex items-center">
+                <ul class="flex flex-col gap-1 mx-2 mt-1">
+                    <button class="dropdownbtn"><img class="cursor-pointer rounded-sm" src="asset/images/language/vi.jpg" alt=""></button>
+                    <div class="dropdown-languge absolute top-7 rounded-sm">
+                        <a href=""><img class="cursor-pointer rounded-sm max-w-full" src="asset/images/language/en.jpg" alt=""></a>
+                    </div>
+                </ul>
+                <i class="fa-solid fa-angle-down sm:hidden"></i>
+            </div>
         </div>
     </div>
-    <div class="slider w-full sm:max-w-[1500px] max-w-[640px] sm:h-[750px] h-[200px] mx-auto relative overflow-hidden">
+    <div class="slider w-full sm:max-w-[1500px] max-w-[640px] sm:h-[750px] h-[375px] mx-auto relative overflow-hidden">
         <div class="list flex absolute top-0 left-0 h-full w-max">
             <div class="itemt">
                 <img src="asset/images/heroSlide/2.jpg" alt="" class="sm:w-full w-[640px] h-full object-cover">
@@ -102,21 +162,25 @@
             </div>
         </div>
         <ul class="nuts absolute sm:top-1/3 bottom-0 sm:right-20 sm:left-[unset] left-1/3 flex sm:flex-col">
-            <li class="active list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
+            <li class="active list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full">
+            </li>
             <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
             <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
             <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
             <li class="list-none sm:w-5 w-2.5 sm:h-5 h-2.5 border-solid border-2 border-white m-2 rounded-full"></li>
         </ul>
-        <div class="slider-content absolute sm:top-1/3 top-[15%] sm:left-[30%] left-10 text-white">
-            <p class="flex sm:text-3xl text1">Thành phần tự nhiên <img class="sm:h-8 h-4 ml-4" src="asset/images/logo/bough-logo.png" alt=""></p>
+        <div class="slider-content absolute sm:top-1/3 top-[30%] sm:left-[30%] left-10 text-white">
+            <p class="flex sm:text-3xl text1">Thành phần tự nhiên <img class="sm:h-8 h-4 ml-4"
+                    src="asset/images/logo/bough-logo.png" alt=""></p>
             <h1 class="sm:my-8 my-2 sm:w-auto w-[100px] font-bold sm:text-7xl">TỰ TIN TỎA SÁNG</h1>
-            <button class="sm:flex sm:justify-center bg-[#efc65a] px-4 py-2 rounded-full mx-auto text3">Đặt Hàng Ngay</button>
+            <button class="sm:flex sm:justify-center bg-[#efc65a] px-4 py-2 rounded-full mx-auto text3">Đặt Hàng
+                Ngay</button>
         </div>
     </div>
-    <div class="utilities">
+    <div class="utilities" id="utilities">
         <div class="">
-            <div class="flex sm:flex-row sm:!flex-nowrap flex-wrap gap-y-10 justify-center items-center py-14 sm:px-10 text-center">
+            <div
+                class="flex sm:flex-row sm:!flex-nowrap flex-wrap gap-y-10 justify-center items-center py-14 sm:px-10 text-center">
                 <div class="sm:px-16 sm:w-[unset] w-1/2 border-solid border-r-2 border-[#e5e2db]">
                     <img src="asset/images/Icons-svg/utilities/1.svg" alt="" class="my-4 mx-auto w-20 ">
                     <h1 class="mb-8 text8">Thành Phần Tự Nhiên</h1>
@@ -149,271 +213,383 @@
                 <div class="sm:ml-36 ml-5 sm:pt-20">
                     <div class="info">
                         <h2 class="text1 sm:text-4xl text-xl font-normal sm:mb-6 mb-3">Sản Phẩm Mới</h2>
-                        <h1 class="text10 sm:text-4xl text-3xl leading-tight sm:mb-4 mb-2">Serium Dưỡng Da <br> Tinh Chất yến Sào <br> Đầu Tiên Ở Việt Nam</h1>
-                        <p class="text3 mb-6">Với thành phần độc đáo của yến sào, serium không chỉ dưỡng ẩm sâu mà còn kích thích sản sinh collagen, giảm nếp nhăn. <br><br>Trải nghiệm sự trẻ trung và khám phá làn da mới với sự hỗ trợ toàn diện từ serum chăm sóc da hằng ngày.</p>
+                        <h1 class="text10 sm:text-4xl text-3xl leading-tight sm:mb-4 mb-2">Serium Dưỡng Da <br> Tinh
+                            Chất yến Sào <br> Đầu Tiên Ở Việt Nam</h1>
+                        <p class="text3 mb-6">Với thành phần độc đáo của yến sào, serium không chỉ dưỡng ẩm sâu mà còn
+                            kích thích sản sinh collagen, giảm nếp nhăn. <br><br>Trải nghiệm sự trẻ trung và khám phá
+                            làn da mới với sự hỗ trợ toàn diện từ serum chăm sóc da hằng ngày.</p>
                     </div>
                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng
+                            Ngay</button>
+                        <button
+                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                            Vào Giỏ Hàng</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="collection bg-[#f3eddd] relative pb-5">
+        <div class="collection bg-[#f3eddd] relative">
             <div class="product sm:w-[1280px] mx-auto">
                 <div class="product-tiles">
                     <div class="product-title">
-                        <div class="sm:flex h-[150px] justify-center items-center flex-col sm:pt-8 pt-4 sm:ml-[unset] ml-40">
-                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="absolute left-[46%] top-5 opacity-25 sm:w-[unset] sm:h-[unset] w-36 h-32">
+                        <div
+                            class="sm:flex h-[150px] justify-center items-center flex-col sm:pt-8 pt-4 sm:ml-[unset] ml-40">
+                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt=""
+                                class="absolute left-[46%] top-5 opacity-25 sm:w-[unset] sm:h-[unset] w-36 h-32">
                             <h1 class="absolute top-14 left-[45%] sm:text-5xl text-3xl text1">Bộ Sưu Tập</h1>
-                            <p class="absolute sm:top-36 top-32 left-[47%] text3 sm:text-lg text-sm pb-5">Vẻ Đẹp Tinh Tế</p>
+                            <p class="absolute sm:top-36 top-32 left-[47%] text3 sm:text-lg text-sm pb-5">Vẻ Đẹp Tinh Tế
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper mySwiper2">
                     <div class="swiper-wrapper mx-1 my-10">
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/1.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>        
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/2.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Kem Tẩy Tế Bào Chết (900ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/1.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/3.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Kem Dưỡng Mắt</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/4.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Kem chống Lão Hóa</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/2.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Kem Tẩy Tế Bào Chết (900ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/5.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/6.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/3.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Kem Dưỡng Mắt</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/7.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/8.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/4.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Kem chống Lão Hóa</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/9.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/10.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/5.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/11.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide bg-white">
-                        <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
-                            <div class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
-                                <img src="asset/images/product/12.png" alt="" class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
-                            </div>
-                            <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
-                            <div class="item-price col-span-3 flex gap-4 mb-5">
-                                <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
-                                <div class="price-current text-lg font-bold">700.000đ</div>
-                                <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">Bán chạy</div>
-                            </div>
-                            <div class="item-oder col-span-3 flex justify-between mb-3">
-                                <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
-                                <div class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/6.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                      </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/7.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/8.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/9.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/10.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/11.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <div class="item w-11/12 h-[600px] mx-auto grid grid-cols-3 text3">
+                                <div
+                                    class="item-image w-full h-[420px] bg-[#fcf8ef] col-span-3 mt-4 flex justify-center items-center rounded-sm mb-4">
+                                    <img src="asset/images/product/12.png" alt=""
+                                        class="w-30 h-80 object-cover mx-auto my-auto transform scale-90">
+                                </div>
+                                <div class="item-name col-span-3 mb-2">Sửa Rửa Mặt Hskin Care (750ml)</div>
+                                <div class="item-price col-span-3 flex gap-4 mb-5">
+                                    <div class="price-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                    <div class="price-current text-lg font-bold">700.000đ</div>
+                                    <div
+                                        class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1 hidden">
+                                        Bán chạy</div>
+                                </div>
+                                <div class="item-oder col-span-3 flex justify-between mb-3">
+                                    <button class="bg-[#efc65a] w-4/5 p-2 rounded-full">Đặt Hàng</button>
+                                    <div
+                                        class="itemt-cart w-10 h-10 flex justify-center items-center border-solid border-2 border-black rounded-full">
+                                        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination sm:hidden"></div>
-                </div>      
+                </div>
             </div>
-        <div class="space h-20"></div>
-        <div class="favourite bg-[#f3eddd] relative py-8">
+        </div>
+        <div class="favourite bg-[#f3eddd] relative">
             <div class="favourite-tiles">
                 <div class="favourite-title">
                     <div class="sm:flex justify-center items-center flex-col sm:pt-8 pt-4 sm:ml-[unset] ml-40">
-                        <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25 left-[46%] sm:w-[unset] sm:h-[unset] w-36 h-32">
-                        <h1 class="absolute top-24 sm:left-[unset] left-[30%] sm:text-5xl text-2xl text1">Sản Phẩm Được Yêu Thích</h1>
-                        <p class="absolute text3 top-40 sm:text-lg sm:left-[unset] left-[35%] text-sm pb-5">Được Đánh Giá Cao Nhất</p>
+                        <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt=""
+                            class="opacity-25 left-[46%] sm:w-[unset] sm:h-[unset] w-36 h-32">
+                        <h1 class="absolute top-24 sm:left-[unset] left-[30%] sm:text-5xl text-2xl text1">Sản Phẩm Được
+                            Yêu Thích</h1>
+                        <p class="absolute text3 top-40 sm:text-lg sm:left-[unset] left-[35%] text-sm pb-5">Được Đánh
+                            Giá Cao Nhất</p>
                     </div>
                 </div>
             </div>
-            <div class="favourite-product swiper mySwiper sm:w-[1280px] sm:h-[500px] max-w-max mx-auto overflow-hidden my-10">
+            <div
+                class="favourite-product swiper mySwiper sm:w-[1280px] sm:h-[500px] max-w-max mx-auto overflow-hidden my-10">
                 <div class="favourite-list swiper-wrapper">
                     <div class="favourite-itemt swiper-slide">
                         <div class="sm:flex bg-[#f3eddd]">
                             <div class="favourite-left">
-                                <div class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover"><img src="asset/images/product/5.png" alt=""></div>
+                                <div
+                                    class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover">
+                                    <img src="asset/images/product/5.png" alt="">
+                                </div>
                             </div>
                             <div class="favourite-right sm:mt-20 sm:mx-[unset] mx-5">
                                 <div class="name sm:w-[600px]">
                                     <div class="info">
-                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản</h1>
+                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản
+                                        </h1>
                                         <div class="price flex gap-4 mb-5">
-                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">1.400.000đ</div>
-                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">1.260.000đ</div>
-                                            <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">-10%</div>
+                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">
+                                                1.400.000đ</div>
+                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">
+                                                1.260.000đ</div>
+                                            <div
+                                                class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                                -10%</div>
                                         </div>
-                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ. Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
+                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa
+                                            chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải
+                                            nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ.
+                                            Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
                                     </div>
                                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                                        <button
+                                            class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt
+                                            Hàng Ngay</button>
+                                        <button
+                                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                                            Vào Giỏ Hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -422,22 +598,37 @@
                     <div class="favourite-itemt swiper-slide">
                         <div class="sm:flex bg-[#f3eddd]">
                             <div class="favourite-left">
-                                <div class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover"><img src="asset/images/product/1.png" alt=""></div>
+                                <div
+                                    class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover">
+                                    <img src="asset/images/product/1.png" alt="">
+                                </div>
                             </div>
                             <div class="favourite-right sm:mt-20 sm:mx-[unset] mx-5">
                                 <div class="name sm:w-[600px]">
                                     <div class="info">
-                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản</h1>
+                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản
+                                        </h1>
                                         <div class="price flex gap-4 mb-5">
-                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">1.400.000đ</div>
-                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">1.260.000đ</div>
-                                            <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">-10%</div>
+                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">
+                                                1.400.000đ</div>
+                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">
+                                                1.260.000đ</div>
+                                            <div
+                                                class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                                -10%</div>
                                         </div>
-                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ. Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
+                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa
+                                            chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải
+                                            nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ.
+                                            Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
                                     </div>
                                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                                        <button
+                                            class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt
+                                            Hàng Ngay</button>
+                                        <button
+                                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                                            Vào Giỏ Hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -446,22 +637,37 @@
                     <div class="favourite-itemt swiper-slide">
                         <div class="sm:flex bg-[#f3eddd]">
                             <div class="favourite-left">
-                                <div class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover"><img src="asset/images/product/2.png" alt=""></div>
+                                <div
+                                    class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover">
+                                    <img src="asset/images/product/2.png" alt="">
+                                </div>
                             </div>
                             <div class="favourite-right sm:mt-20 sm:mx-[unset] mx-5">
                                 <div class="name sm:w-[600px]">
                                     <div class="info">
-                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản</h1>
+                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản
+                                        </h1>
                                         <div class="price flex gap-4 mb-5">
-                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">1.400.000đ</div>
-                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">1.260.000đ</div>
-                                            <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">-10%</div>
+                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">
+                                                1.400.000đ</div>
+                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">
+                                                1.260.000đ</div>
+                                            <div
+                                                class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                                -10%</div>
                                         </div>
-                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ. Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
+                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa
+                                            chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải
+                                            nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ.
+                                            Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
                                     </div>
                                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                                        <button
+                                            class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt
+                                            Hàng Ngay</button>
+                                        <button
+                                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                                            Vào Giỏ Hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -470,22 +676,37 @@
                     <div class="favourite-itemt swiper-slide">
                         <div class="sm:flex bg-[#f3eddd]">
                             <div class="favourite-left">
-                                <div class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover"><img src="asset/images/product/3.png" alt=""></div>
+                                <div
+                                    class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover">
+                                    <img src="asset/images/product/3.png" alt="">
+                                </div>
                             </div>
                             <div class="favourite-right sm:mt-20 sm:mx-[unset] mx-5">
                                 <div class="name sm:w-[600px]">
                                     <div class="info">
-                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản</h1>
+                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản
+                                        </h1>
                                         <div class="price flex gap-4 mb-5">
-                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">1.400.000đ</div>
-                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">1.260.000đ</div>
-                                            <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">-10%</div>
+                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">
+                                                1.400.000đ</div>
+                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">
+                                                1.260.000đ</div>
+                                            <div
+                                                class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                                -10%</div>
                                         </div>
-                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ. Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
+                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa
+                                            chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải
+                                            nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ.
+                                            Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
                                     </div>
                                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                                        <button
+                                            class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt
+                                            Hàng Ngay</button>
+                                        <button
+                                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                                            Vào Giỏ Hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -494,22 +715,37 @@
                     <div class="favourite-itemt swiper-slide">
                         <div class="sm:flex bg-[#f3eddd]">
                             <div class="favourite-left">
-                                <div class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover"><img src="asset/images/product/4.png" alt=""></div>
+                                <div
+                                    class="favourite-img sm:w-[500px] h-[450px] flex justify-center items-center sm:mx-20 mx-5 object-cover">
+                                    <img src="asset/images/product/4.png" alt="">
+                                </div>
                             </div>
                             <div class="favourite-right sm:mt-20 sm:mx-[unset] mx-5">
                                 <div class="name sm:w-[600px]">
                                     <div class="info">
-                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản</h1>
+                                        <h1 class="text10 sm:text-5xl text-3xl leading-tight mb-4">Bộ Sản Phẩm Cơ Bản
+                                        </h1>
                                         <div class="price flex gap-4 mb-5">
-                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">1.400.000đ</div>
-                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">1.260.000đ</div>
-                                            <div class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">-10%</div>
+                                            <div class="price-cost line-through sm:text-xs text-[#9e9e9e] mt-1.5">
+                                                1.400.000đ</div>
+                                            <div class="price-current sm:text-lg text-2xl text-red-600 font-bold">
+                                                1.260.000đ</div>
+                                            <div
+                                                class="price-status text-xs text-red-600 border-solid border-2 border-red-600 rounded-md p-1">
+                                                -10%</div>
                                         </div>
-                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ. Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
+                                        <p class="text3 mb-6">Dòng sản phẩm sữa rửa mặt và kem tẩy tế bào chết - lựa
+                                            chọn hàng đầu cho làn da tươi trẻ và mịn màng. <br> <br>Tận hưởng trải
+                                            nghiệm làm sạch sâu, loại bỏ tế bào chết, để lại làn da mềm mại và rạng ngờ.
+                                            Chăm sóc da hiệu quả, đem lại sự tự tin mỗi ngày.</p>
                                     </div>
                                     <div class="btn pb-20 flex sm:flex-row flex-col">
-                                        <button class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt Hàng Ngay</button>
-                                        <button class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm Vào Giỏ Hàng</button>
+                                        <button
+                                            class="bg-[#efc65a] w-[150px] [40px] sm:mb-0 mb-2 px-4 py-2 rounded-full text3">Đặt
+                                            Hàng Ngay</button>
+                                        <button
+                                            class=" w-[200px] h-[40px] sm:px-4 py-[6px] sm:ml-6 border-solid border-2 border-black rounded-full text3">Thêm
+                                            Vào Giỏ Hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -520,25 +756,32 @@
             </div>
         </div>
         <div class="space h-20"></div>
-        <div class="sale-main bg-[#f3eddd]">
+        <div class="sale-main bg-[#f3eddd]"  id="product-sale">
             <div class="sale sm:flex sm:max-w-[1280px] w-full mx-auto">
                 <div class="sale-left relative sm:w-[600px] w-[450px] sm:h-[600px] h-[450px] ml-auto">
                     <div>
-                        <img src="asset/images/background/promotion.png" alt="" class="rounded-t-full sm:w-[400px] w-[350px] sm:h-[600px] h-[450px] absolute top-[-30px] left-5">
-                        <img src="asset/frame_svg/frame_top.svg" alt="" class="absolute sm:w-[430px] w-[380px] top-[-50px] left-2">
-                        <img  src="asset/frame_svg/frame_bottom.svg" alt="" class="absolute sm:w-[600px] w-[410px] bottom-5 left-2">
+                        <img src="asset/images/background/promotion.png" alt=""
+                            class="rounded-t-full sm:w-[400px] w-[350px] sm:h-[600px] h-[450px] absolute top-[-30px] left-5">
+                        <img src="asset/frame_svg/frame_top.svg" alt=""
+                            class="absolute sm:w-[430px] w-[380px] top-[-50px] left-2">
+                        <img src="asset/frame_svg/frame_bottom.svg" alt=""
+                            class="absolute sm:w-[600px] w-[410px] bottom-5 left-2">
                     </div>
                 </div>
                 <div class="sale-right relative w-4/5 flex flex-col justify-center items-center mt-5">
                     <div class="title mb-28">
                         <div class="flex justify-center items-center flex-col text-center">
-                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="absolute top-0 sm:left-[unset] left-[45%] opacity-25 w-36 h-32">
-                            <h1 class="absolute top-10 sm:left-[unset] left-[45%] sm:text-5xl text-3xl text1">Khuyến Mãi</h1>
-                            <p class="absolute top-28 sm:left-[unset] left-1/4 text3 sm:text-lg text-sm pb-4">Trãi Nghiệm Sản Phẩm Với Mức Giá Tốt Nhất</p>
+                            <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt=""
+                                class="absolute top-0 sm:left-[unset] left-[45%] opacity-25 w-36 h-32">
+                            <h1 class="absolute top-10 sm:left-[unset] left-[45%] sm:text-5xl text-3xl text1">Khuyến Mãi
+                            </h1>
+                            <p class="absolute top-28 sm:left-[unset] left-1/4 text3 sm:text-lg text-sm pb-4">Trãi
+                                Nghiệm Sản Phẩm Với Mức Giá Tốt Nhất</p>
                         </div>
                     </div>
                     <div class="time flex sm:my-8 my-16">
-                        <div class="date px-10 text-center border-solid border-r-2 border-[#e5e2db] ml-16">
+                        <div
+                            class="date px-10 text-center border-solid border-r-2 border-[#e5e2db] sm:ml-[unset] ml-16">
                             <p class="font-bold text-3xl text8">01</p>
                             <p class="text-lg text3">Ngày</p>
                         </div>
@@ -551,25 +794,35 @@
                             <p class="text-lg text3">Giờ</p>
                         </div>
                     </div>
-                    <div class="product-sale  mySwiper4 sm:!w-[820px] w-[100vw] h-64 sm:mx-auto ml-16 overflow-hidden">
-                        <div class="list-sale swiper-wrapper flex">
+                    <div
+                        class="product-sale  mySwiper4 sm:w-[820px] w-[90vw] sm:h-[unset] h-64 sm:max-w-max mx-auto overflow-hidden">
+                        <div class="list-sale swiper-wrapper">
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                    <div
+                                        class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div
+                                            class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
                                             <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
+                                        </div>
                                         <div class="left-des m-2.5">
                                             <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
                                             <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">
+                                                    900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
+                                                    <div
+                                                        class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">
+                                                        -35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
+                                                    <button
+                                                        class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt
+                                                        Hàng</button>
+                                                    <button
+                                                        class="w-8 h-8 border-solid border-2 border-black rounded-full"><i
+                                                            class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -578,21 +831,30 @@
                             </div>
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
+                                    <div
+                                        class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div
+                                            class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                            <img src="asset/images/product/2.png" alt="" class="scale-[.4]">
+                                        </div>
                                         <div class="left-des m-2.5">
-                                            <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
+                                            <div class="left-title mt-2.5">Sữa Rữa Mặt HSkin Care (350ml) </div>
                                             <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">
+                                                    900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
+                                                    <div
+                                                        class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">
+                                                        -35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
+                                                    <button
+                                                        class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt
+                                                        Hàng</button>
+                                                    <button
+                                                        class="w-8 h-8 border-solid border-2 border-black rounded-full"><i
+                                                            class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -601,21 +863,30 @@
                             </div>
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
+                                    <div
+                                        class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div
+                                            class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                            <img src="asset/images/product/3.png" alt="" class="scale-[.4]">
+                                        </div>
                                         <div class="left-des m-2.5">
                                             <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
                                             <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">
+                                                    900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
+                                                    <div
+                                                        class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">
+                                                        -35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
+                                                    <button
+                                                        class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt
+                                                        Hàng</button>
+                                                    <button
+                                                        class="w-8 h-8 border-solid border-2 border-black rounded-full"><i
+                                                            class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -624,21 +895,30 @@
                             </div>
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
+                                    <div
+                                        class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div
+                                            class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                            <img src="asset/images/product/4.png" alt="" class="scale-[.4]">
+                                        </div>
                                         <div class="left-des m-2.5">
                                             <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
                                             <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">
+                                                    900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
+                                                    <div
+                                                        class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">
+                                                        -35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
+                                                    <button
+                                                        class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt
+                                                        Hàng</button>
+                                                    <button
+                                                        class="w-8 h-8 border-solid border-2 border-black rounded-full"><i
+                                                            class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -647,21 +927,30 @@
                             </div>
                             <div class="itemt-sale swiper-slide">
                                 <div class="flex sm:gap-4 gap-8 pt-5 sm:ml-[unset] ml-6">
-                                    <div class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
-                                        <div class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
-                                            <img src="asset/images/product/1.png" alt="" class="scale-[.4]">
-                                        </div>                              
+                                    <div
+                                        class="itemt-left bg-white sm:w-[400px] h-[180px] flex gap-1 text3 rounded-md sm:pr-[unset] pr-4">
+                                        <div
+                                            class="left-img w-40 h-40 bg-[#f5f0da] mt-2.5 ml-2.5 flex items-center justify-center rounded-md">
+                                            <img src="asset/images/product/6.png" alt="" class="scale-75">
+                                        </div>
                                         <div class="left-des m-2.5">
-                                            <div class="left-title mt-2.5">Dưỡng Ẩm Da (350ml) </div>
+                                            <div class="left-title mt-2.5">Serum Dưỡng Ẩm (350ml) </div>
                                             <div class="left-prices">
-                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">900.000đ</div>
+                                                <div class="prices-cost line-through text-xs text-[#9e9e9e] mt-1.5">
+                                                    900.000đ</div>
                                                 <div class="price flex my-3">
                                                     <div class="price-current mr-2">1.260.000đ</div>
-                                                    <div class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">-35%</div>
+                                                    <div
+                                                        class="price-status flex text-xs text-red-600 border-solid border border-red-600 rounded-md items-center justify-center px-2">
+                                                        -35%</div>
                                                 </div>
                                                 <div class="btn pb-20">
-                                                    <button class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt Hàng</button>
-                                                    <button class="w-8 h-8 border-solid border-2 border-black rounded-full"><i class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
+                                                    <button
+                                                        class="bg-[#efc65a] sm:px-6 px-4 py-2 rounded-full text3">Đặt
+                                                        Hàng</button>
+                                                    <button
+                                                        class="w-8 h-8 border-solid border-2 border-black rounded-full"><i
+                                                            class="fa-solid fa-bag-shopping cursor-pointer"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -674,7 +963,6 @@
                 </div>
             </div>
         </div>
-        <div class="space h-20"></div>
         <div class="feel relative h-[600px]">
             <div class="feel-tiles">
                 <div class="feel-title">
@@ -685,203 +973,135 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback swiper mySwiper3 w-[1280px] max-w-max mx-auto overflow-hidden py-10">
-                <div class="feedback-list mb-10 swiper-wrapper">
-                    <div class="feedback-itemt mb-10 swiper-slide">
-                        <div class="flex gap-24">
-                            <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
-                                <p class="text3 pb-4">"Sản Phẩm Sử Dụng Rất Tốt, giá cả hợp lí, sẽ ủng hộ tiếp tục."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/1.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Vy Hoàng</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="feedback-right flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
-                                <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm thấy công dụng trong một tuần đầu."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/2.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Mai Lê</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+            <div class="feedbackswiper mySwiper4 sm:w-[1280px] w-[90vw] mx-auto overflow-hidden">
+                <div class="feedback-list swiper-wrapper">
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
+                            <p class="text3 pb-4 text-center">"Sản phẩm sử dụng rất tốt, giá cả hợp lí, sẽ ủng hộ tiếp
+                                tục."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/1.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-10 swiper-slide">
-                        <div class="flex gap-24">
-                            <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
-                                <p class="text3 pb-4">"Sản Phẩm Sử Dụng Rất Tốt, giá cả hợp lí, sẽ ủng hộ tiếp tục."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/1.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Vy Hoàng</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="feedback-right flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
-                                <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm thấy công dụng trong một tuần đầu."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/2.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Mai Lê</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
+                            <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm
+                                thấy công dụng trong một tuần đầu."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/2.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-10 swiper-slide">
-                        <div class="flex  gap-24">
-                            <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
-                                <p class="text3 pb-4">"Sản Phẩm Sử Dụng Rất Tốt, giá cả hợp lí, sẽ ủng hộ tiếp tục."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/1.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Vy Hoàng</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="feedback-right flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
-                                <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm thấy công dụng trong một tuần đầu."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/2.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Mai Lê</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
+                            <p class="text3 pb-4 text-center">"Sản phẩm sử dụng rất tốt, giá cả hợp lí, sẽ ủng hộ tiếp
+                                tục."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/1.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-10 swiper-slide">
-                        <div class="flex  gap-24">
-                            <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
-                                <p class="text3 pb-4">"Sản Phẩm Sử Dụng Rất Tốt, giá cả hợp lí, sẽ ủng hộ tiếp tục."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/1.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Vy Hoàng</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="feedback-right flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
-                                <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm thấy công dụng trong một tuần đầu."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/2.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Mai Lê</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
+                            <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm
+                                thấy công dụng trong một tuần đầu."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/2.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="feedback-itemt mb-10 swiper-slide">
-                        <div class="flex  gap-24">
-                            <div class="feedback-left flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
-                                <p class="text3 pb-4">"Sản Phẩm Sử Dụng Rất Tốt, giá cả hợp lí, sẽ ủng hộ tiếp tục."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/1.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Vy Hoàng</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Sản Phẩm Tốt Vượt Mong Đợi</h1>
+                            <p class="text3 pb-4 text-center">"Sản phẩm sử dụng rất tốt, giá cả hợp lí, sẽ ủng hộ tiếp
+                                tục."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/1.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="feedback-right flex flex-col w-[600px] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
-                                <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
-                                <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
-                                <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm thấy công dụng trong một tuần đầu."</p>
-                                <div class="user flex py-4">
-                                    <img src="asset/images/avatar/2.png" alt="" class="px-4">
-                                    <div>
-                                        <p class="text3">Mai Lê</p>
-                                        <div class="star text-yellow-500">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                        </div>
+                    </div>
+                    <div class="feedback-itemt swiper-slide">
+                        <div
+                            class="feedback-right flex flex-col sm:w-[600px] sm:h-[290px] w-[90vw] justify-center items-center bg-[#f3eddd] shadow-lg rounded-md">
+                            <p class="quotes text-5xl py-4"><i class="fa-solid fa-quote-left"></i></p>
+                            <h1 class="text8 text-2xl pb-4">Serum DÙng Rất Thích</h1>
+                            <p class="text3 pb-4 text-center">"Chất serum khi dùng lên da không bị dính, mau khô, cảm
+                                thấy công dụng trong một tuần đầu."</p>
+                            <div class="user flex py-4">
+                                <img src="asset/images/avatar/2.png" alt="" class="px-4">
+                                <div>
+                                    <p class="text3">Mai Lê</p>
+                                    <div class="star text-yellow-500">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
                             </div>
@@ -896,105 +1116,65 @@
                 <div class="experience-title">
                     <div class="flex justify-center items-center flex-col pt-8">
                         <img src="asset/images/Icons-svg/lá cây/leaf.svg" alt="" class="opacity-25">
-                        <h1 class="absolute top-16 text-5xl text1">Kinh Nghiệm Làm Đẹp</h1>
+                        <h1 class="absolute top-16 sm:text-5xl text-4xl text1">Kinh Nghiệm Làm Đẹp</h1>
                         <p class="text3 text-lg pb-5">Đẹp Mỗi Ngày</p>
                     </div>
                 </div>
             </div>
-            <div class="experience-blogs swiper mySwiper3 w-[1280px] max-w-max mx-auto">
+            <div class="experience-blogs swiper mySwiper3 sm:w-[1280px] w-[90vw] max-w-max mx-auto">
                 <div class="list-blogs swiper-wrapper">
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/blog/1.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng,
+                                    chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến
+                                    còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/blog/2.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến
+                                    là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây
+                                    hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/blog/3.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng
+                                    đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu
+                                    uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/blog/1.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng,
+                                    chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến
+                                    còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/blog/2.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/blog/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến
+                                    là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây
+                                    hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>
                             </div>
                         </div>
                     </div>
@@ -1015,100 +1195,60 @@
                     </div>
                 </div>
             </div>
-            <div class="news-blogs swiper mySwiper3 w-[1280px] max-w-max mx-auto">
+            <div class="new-blogs swiper mySwiper3 sm:w-[1280px] w-[90vw] max-w-max mx-auto">
                 <div class="list-blogs swiper-wrapper">
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/news/1.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng,
+                                    chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến
+                                    còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/news/2.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến
+                                    là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây
+                                    hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/news/3.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng
+                                    đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu
+                                    uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/news/1.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/2.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng,
+                                    chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến
+                                    còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>
                             </div>
                         </div>
                     </div>
                     <div class="blog-itemt mb-14 swiper-slide">
                         <div class="flex gap-4 pt-4">
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/1.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Cách Làm Đẹp Da Bằng Tổ Yến Ít Ai Biết</h1>
-                                <p class="text3 text-sm">Trong tổ yến có rất nhiều chất đạm, đường bột, khoáng vi lượng, chất sơ và 18 loại axit amin khác. Ngoài các tác dụng tăng cường sức khỏe, tôt yến còn có tác dụng đặc biệt trong việc chăm sóc da ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
+                            <div class="itemt">
                                 <img src="asset/images/news/2.jpg" alt="" class="rounded pb-1">
                                 <h1 class="text8 text-xl h-16">Mặt Nạ Yến Sào: Giải Pháp Làm Đẹp, Trẻ Hóa Làn Da</h1>
-                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>    
-                            </div>
-                            <div class="itemt w-1/3">
-                                <img src="asset/images/news/3.jpg" alt="" class="rounded pb-1">
-                                <h1 class="text8 text-xl h-16">Công Dụng Của Yến Sào Đối Với Làn Da Bạn</h1>
-                                <p class="text3 text-sm">Nước yến là loại thực phẩm giàu dinh dưỡng, có nhiều công dụng đối với sức khỏe và sắc đẹp. Tuy nhiên, có nhiều chị em vẫn thường thắc mắc liệu uống nước yến có đẹp da không? Hãy cùng Hskin Care ...</p>    
+                                <p class="text3 text-sm">Bên cạnh công dụng bồi bổ sức khỏe, yến sào còn được biết đến
+                                    là một loại nguyên liệu làm đẹp và chăm sóc da tuyệt vời cho chị em phụ nữ. Sau đây
+                                    hãy cùng Hskin Care khám phá ngay các cách làm đẹp ...</p>
                             </div>
                         </div>
                     </div>
@@ -1122,17 +1262,19 @@
         <form action="">
             <div class="forms bg-[#f3eddd] flex flex-col justify-center items-center pb-5">
                 <div class="form-title py-4 text10 text-xl">Đăng Ký Để Nhận Ưu Đãi Độc Quyền</div>
-                <div class="form-input">
-                    <input class="w-72 h-10 p-4 mx-2 rounded-full border-2 border-solid border-[#efc65a]" type="email" name="email" placeholder="Nhập Email của bạn">
-                    <input class="w-72 h-10 p-4 mx-2 rounded-full border-2 border-solid border-[#efc65a]" type="number" name="email" placeholder="Số điện thoại">
-                    <button class="bg-[#efc65a] px-6 py-2 rounded-full text3">Đăng Ký</button>
+                <div class="form-input flex sm:flex-row flex-col justify-center gap-5 items-center">
+                    <input class="sm:w-72 w-[90vw] h-10 p-4 rounded-full border-2 border-solid border-[#efc65a]"
+                        type="email" name="email" placeholder="Nhập Email của bạn">
+                    <input class="sm:w-72 w-[90vw] h-10 p-4 rounded-full border-2 border-solid border-[#efc65a]"
+                        type="number" name="email" placeholder="Số điện thoại">
+                    <button class="bg-[#efc65a] sm:w-[unset] w-[90vw] px-6 py-2 rounded-full text3">Đăng Ký</button>
                 </div>
             </div>
         </form>
     </div>
     <div class="bg-[#f3eddd]">
-        <div class="footer-main w-[1280px] max-w-max mx-auto border-solid border-t-2 border-[#ded8cc]">
-            <div class=" grid grid-cols-5 gap-20 pb-10">
+        <div class="footer-main sm:w-[1280px] w-[90vw] max-w-max mx-auto border-solid border-t-2 border-[#ded8cc]">
+            <div class="grid sm:grid-cols-5 grid-cols-1 gap-10 pb-10">
                 <div class="contact-info col-span-2">
                     <p class="text8 my-5">Thông Tin Liên Hệ</p>
                     <div class="address text3 flex gap-4 mb-2 items-center">
@@ -1147,11 +1289,8 @@
                         <i class="fa-solid fa-envelope"></i>
                         <p>yensaohoangphi@gmail.com</p>
                     </div>
-                    <div class="logo">
-                        <img src="asset/images/logo/bo-cong-thuong.png" alt="">
-                    </div>
                 </div>
-                <div class="clident">
+                <div class="clident sm:!col-span-1 col-span-2">
                     <p class="text8 my-5">Khách Hàng</p>
                     <div class="text3 flex gap-4 mb-2 items-center">
                         <i class="fa-solid fa-fan opacity-20"></i>
@@ -1166,7 +1305,7 @@
                         <p>Chính sách đổi trả</p>
                     </div>
                 </div>
-                <div class="product">
+                <div class="product sm:!col-span-1 col-span-2">
                     <p class="text8 my-5">Sản Phẩm</p>
                     <div class="text3 flex gap-4 mb-2 items-center">
                         <i class="fa-solid fa-fan opacity-20"></i>
@@ -1177,7 +1316,7 @@
                         <p>Chính sách đổi trả</p>
                     </div>
                 </div>
-                <div class="connect">
+                <div class="connect sm:!col-span-1 col-span-2">
                     <p class="text8 my-5">Kết Nối Với Chúng Tôi</p>
                     <div class="app flex gap-5">
                         <img src="asset/images/vector/facebook.svg" alt="">
@@ -1186,11 +1325,15 @@
                         <img src="asset/images/vector/zalo.svg" alt="">
                     </div>
                 </div>
+                <div class="logo">
+                    <img src="asset/images/logo/bo-cong-thuong.png" alt="">
+                </div>
             </div>
         </div>
     </div>
     <div class="bg-[#5b5235]">
-        <div class=" w-[1280px] mx-auto flex justify-between text-white text3 text-xs py-2">
+        <div
+            class="sm:w-[1280px] w-[90vw] mx-auto flex sm:flex-row flex-col sm:justify-between text-center text-white text3 text-xs py-2">
             <div class="flex gap-1 items-center justify-center">
                 <i class="fa-regular fa-copyright"></i>
                 <p>Bản quyền thuộc về Hskin Care</p>
@@ -1201,63 +1344,77 @@
     <script src="js/scrip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        effect: "fade",
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-    });
-    var swiper = new Swiper(".mySwiper2", {
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 40,
+        });
+        var swiper = new Swiper(".mySwiper2", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
-        },
-    });
-    var swiper = new Swiper(".mySwiper3", {
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-    });
-    var swiper = new Swiper(".mySwiper4", {
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 1,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
             },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 10,
+        });
+        var swiper = new Swiper(".mySwiper3", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
             },
-        },
-    });
+        });
+        var swiper = new Swiper(".mySwiper4", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+        });
     </script>
 </body>
+
 </html>

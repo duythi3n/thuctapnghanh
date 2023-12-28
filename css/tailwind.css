@@ -148,6 +148,7 @@
 }
 .dropdown-content a {
     color: black;
+    padding: 12px 10px;
     text-decoration: none;
     display: block;
     border-radius: 2px;
